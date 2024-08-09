@@ -1,5 +1,5 @@
 {% set name = "mistralai" %}
-{% set version = "0.4.2" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mistralai-{{ version }}.tar.gz
-  sha256: 5eb656710517168ae053f9847b0bb7f617eda07f1f93f946ad6c91a4d407fd93
+  sha256: f6b055d21dd56e174e5023371295c35945d0f7b282486457d6a71ff47c703fe8
 
 build:
   noarch: python
@@ -35,7 +35,7 @@ test:
 
 about:
   home: https://github.com/mistralai/client-python
-  summary: Python client library for Mistral AI platform 
+  summary: Python client library for Mistral AI platform
   license: Apache-2.0
   license_file: LICENSE
 
