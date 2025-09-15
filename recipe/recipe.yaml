@@ -1,0 +1,47 @@
+
+context:
+  version: "1.9.10"
+
+package:
+  name: mistralai
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/m/mistralai/mistralai-${{ version }}.tar.gz
+  sha256: a95721276f035bf86c7fdc1373d7fb7d056d83510226f349426e0d522c0c0965
+
+build:
+  noarch: python
+  script: python -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - poetry-core
+    - pip
+  run:
+    - python ${{ python_min }}.*
+    - httpx >=0.28.1
+    - pydantic >=2.10.3
+    - python-dateutil >=2.8.2
+    - typing-inspection >=0.4.0
+    - pyyaml >=6.0.2,<7.0.0,
+
+tests:
+  - python:
+      imports:
+        - mistralai
+      pip_check: true
+      python_version: ${{ python_min }}.*
+
+about:
+  homepage: https://github.com/mistralai/client-python
+  summary: Python client library for Mistral AI platform
+  license: Apache-2.0
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - timkpaine
+    - jtpio
