@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: python -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
@@ -20,7 +20,7 @@ requirements:
     - poetry-core
     - pip
   run:
-    - python ${{ python_min }}.*
+    - python >=${{ python_min }}
     - eval-type-backport >=0.2.0
     - httpx >=0.28.1
     - pydantic >=2.10.3
