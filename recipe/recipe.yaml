@@ -1,5 +1,5 @@
 context:
-  version: "1.10.0"
+  version: "1.9.11"
 
 package:
   name: mistralai
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/m/mistralai/mistralai-${{ version }}.tar.gz
-  sha256: c92e9a5ec7057577b326d47a4b1c186f42660bccbe95167fc25c686fe658ad23
+  sha256: 3df9e403c31a756ec79e78df25ee73cea3eb15f86693773e16b16adaf59c9b8a
 
 build:
   noarch: python
   script: python -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -28,10 +28,6 @@ requirements:
     - typing-inspection >=0.4.0
     - pyyaml >=6.0.2,<7.0.0
     - invoke >=2.2.0,<3.0.0
-    - opentelemetry-sdk >=1.33.1,<2.0.0
-    - opentelemetry-api >=1.33.1,<2.0.0
-    - opentelemetry-exporter-otlp-proto-http >=1.37.0,<2.0.0
-    - opentelemetry-semantic-conventions >=0.59b0,<0.60a0
 
 tests:
   - python:
