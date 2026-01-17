@@ -1,5 +1,5 @@
 context:
-  version: "1.10.0"
+  version: "1.10.1"
 
 package:
   name: mistralai
@@ -7,17 +7,17 @@ package:
 
 source:
   url: https://pypi.org/packages/source/m/mistralai/mistralai-${{ version }}.tar.gz
-  sha256: c92e9a5ec7057577b326d47a4b1c186f42660bccbe95167fc25c686fe658ad23
+  sha256: 2162c56840dc325bddac4d36877c4d97765ee0cf4db5f2825f469c14511063e9
 
 build:
   noarch: python
   script: python -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
     - python ${{ python_min }}.*
-    - poetry-core
+    - hatchling
     - pip
   run:
     - python >=${{ python_min }}
