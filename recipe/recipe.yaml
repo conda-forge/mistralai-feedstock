@@ -1,5 +1,5 @@
 context:
-  version: "1.12.4"
+  version: "2.0.0"
 
 package:
   name: mistralai
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/m/mistralai/mistralai-${{ version }}.tar.gz
-  sha256: e52b53bab58025dcd208eeac13e3c3df5778d4112eeca1f08124096c7738929f
+  sha256: acb7937a53119ece67f4978809d4cf630fbf54b4dfe85c0eeae778ac40850fab
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
     - python >=${{ python_min }}
     - eval-type-backport >=0.2.0
     - httpx >=0.28.1
-    - pydantic >=2.10.3
+    - pydantic >=2.11.2
     - python-dateutil >=2.8.2
     - typing-inspection >=0.4.0
     - pyyaml >=6.0.2,<7.0.0
@@ -31,7 +31,7 @@ requirements:
     - opentelemetry-sdk >=1.33.1,<2.0.0
     - opentelemetry-api >=1.33.1,<2.0.0
     - opentelemetry-exporter-otlp-proto-http >=1.37.0,<2.0.0
-    - opentelemetry-semantic-conventions >=0.59b0,<0.60a0
+    - opentelemetry-semantic-conventions >=0.60b1,<0.61a0
 
 tests:
   - python:
