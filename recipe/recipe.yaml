@@ -1,5 +1,5 @@
 context:
-  version: "2.0.2"
+  version: "2.0.3"
 
 package:
   name: mistralai
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/m/mistralai/mistralai-${{ version }}.tar.gz
-  sha256: 3e3095fda764b4d4ad09771abe6176df46f2cb0484da239fb09182d52c1f5a8c
+  sha256: 185ad7f02934205172fe6bddfd267c8820faedf6bb8a55c929a90d47d4adf9e5
 
 build:
   noarch: python
