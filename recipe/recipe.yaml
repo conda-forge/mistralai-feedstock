@@ -32,6 +32,7 @@ requirements:
     - opentelemetry-api >=1.33.1,<2.0.0
     - opentelemetry-exporter-otlp-proto-http >=1.37.0,<2.0.0
     - opentelemetry-semantic-conventions >=0.60b1,<0.61a0
+    - jsonpath-python >=1.0.6
 
 tests:
   - python:
