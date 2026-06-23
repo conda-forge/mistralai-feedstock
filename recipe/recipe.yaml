@@ -49,6 +49,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - chaen
     - davidbrochart
     - timkpaine
     - jtpio
