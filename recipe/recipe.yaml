@@ -1,5 +1,5 @@
 context:
-  version: "2.10.1"
+  version: "3.0.0"
 
 package:
   name: mistralai
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/m/mistralai/mistralai-${{ version }}.tar.gz
-  sha256: 43b61643ba4f120463e5faf7305a6f40eb29f8e3a21321893969e56c20ed3fbc
+  sha256: 60789d0efd23f779d18922e4a6a4f54af428dff05deab0be9fc963acf7160f7f
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - eval-type-backport >=0.2.0
-    - httpx >=0.28.1
+    - httpx2 >=2.13.0
     - pydantic >=2.11.2
     - python-dateutil >=2.8.2
     - typing-inspection >=0.4.0
@@ -39,7 +39,9 @@ tests:
       imports:
         - mistralai
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://github.com/mistralai/client-python
